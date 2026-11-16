@@ -2,7 +2,7 @@
 <html lang="ru"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Смена инкассатора</title>
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script async src="https://telegram.org/js/telegram-web-app.js"></script>
 <style>
 *{box-sizing:border-box;margin:0}
 :root{--y:#ffdd2d;--bg:#10131a;--card:#1b2030;--red:#ff4d5a;--g:#3ddc84}
@@ -68,7 +68,7 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#0c131b}
 .vnline{font-size:18px;line-height:1.5}
 .vnactions{padding:12px 18px 20px;display:grid;gap:9px}
 .vnactions button{min-height:48px;padding:12px;border-radius:12px;border:1px solid #66808f;background:#2a4151;color:white;font:inherit;text-align:left}
-.vnactions button:last-child{border-color:#dfb77b}
+.vnactions button:focus-visible{outline:2px solid #dfb77b;outline-offset:2px}
 </style><style>
 #nav{position:sticky;bottom:0;z-index:50;display:flex;justify-content:space-around;gap:3px;padding:9px 5px calc(9px + env(safe-area-inset-bottom));background:#101e29;border-top:1px solid #3b5261}
 #nav button{background:none;border:0;color:#b9cbd5;font-size:11px;padding:8px 5px;min-width:60px}
@@ -185,8 +185,8 @@ body.tutorial-preview #nav{display:flex!important}
 body.tutorial-preview #panel{min-height:unset!important;display:block!important}
 </style><style>
 .name-entry{margin:20px 0 24px;text-align:left}.name-entry label{display:block;margin-bottom:10px;color:#eac88e;font-weight:700}.name-entry input{width:100%;box-sizing:border-box;padding:17px 16px;border:2px solid #607c8c;border-radius:13px;background:#203747;color:#fff;font:inherit;font-size:20px;outline:none}.name-entry input:focus{border-color:#eac88e;box-shadow:0 0 0 3px #eac88e25}.name-entry input::placeholder{color:#a0b3bf}.name-error{min-height:22px;color:#ffb4a8;font-size:13px;margin-top:8px}
-</style><style id="daily-stats-style">.daystats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:14px 0}.daystats>div{background:#1b2030;border:1px solid #343d55;border-radius:12px;padding:12px 5px;text-align:center}.daystats b{display:block;font-size:22px;color:#ffdd2d}.daystats small{display:block;font-size:11px;color:#aeb8cc;margin-top:4px}.crewline{background:#242c3f;border-left:3px solid var(--y);border-radius:10px;padding:10px 12px;margin:10px 0 14px;display:flex;flex-direction:column;gap:5px;font-size:14px}.crewline b{color:var(--y);font-size:12px}.crewline span{line-height:1.4}.dialogue-screen{display:flex;flex-direction:column;gap:22px;min-height:180px;justify-content:space-between;padding:16px 4px}.dialogue-copy{white-space:pre-wrap;font-size:18px;line-height:1.55;color:#fff;background:#232a3b;padding:18px;border-radius:14px;border-left:3px solid var(--y)}.dialogue-screen .btn{margin-top:8px}<style>.dialogue-speaker{font-size:12px;letter-spacing:1px;font-weight:800;color:#f4d182;margin:4px 0 -12px 10px}.phone-bubble .phone-sender{display:block;font-size:10px;font-weight:800;letter-spacing:.4px;opacity:.82;margin-bottom:5px}.phone-bubble.mine .phone-sender{color:#e8f4ff}</style><style id="game-version-style">#game-version{position:fixed;right:max(12px,calc((100vw - 520px)/2 + 12px));bottom:calc(70px + env(safe-area-inset-bottom,0px));z-index:900;color:#aab8c6;background:#101923d9;border:1px solid #425566;border-radius:7px;padding:4px 7px;font:600 11px system-ui,sans-serif;pointer-events:none;letter-spacing:.03em}body.title-screen #game-version{bottom:calc(12px + env(safe-area-inset-bottom,0px))}</style></head><body class="title-screen">
-<div id="game-version" aria-label="Версия игры">v1.14</div>
+</style><style id="daily-stats-style">.daystats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:14px 0}.daystats>div{background:#1b2030;border:1px solid #343d55;border-radius:12px;padding:12px 5px;text-align:center}.daystats b{display:block;font-size:22px;color:#ffdd2d}.daystats small{display:block;font-size:11px;color:#aeb8cc;margin-top:4px}.crewline{background:#242c3f;border-left:3px solid var(--y);border-radius:10px;padding:10px 12px;margin:10px 0 14px;display:flex;flex-direction:column;gap:5px;font-size:14px}.crewline b{color:var(--y);font-size:12px}.crewline span{line-height:1.4}.dialogue-screen{display:flex;flex-direction:column;gap:22px;min-height:180px;justify-content:space-between;padding:16px 4px}.dialogue-copy{white-space:pre-wrap;font-size:18px;line-height:1.55;color:#fff;background:#232a3b;padding:18px;border-radius:14px;border-left:3px solid var(--y)}.dialogue-screen .btn{margin-top:8px}</style><style>.dialogue-speaker{font-size:12px;letter-spacing:1px;font-weight:800;color:#f4d182;margin:4px 0 -12px 10px}.phone-bubble .phone-sender{display:block;font-size:10px;font-weight:800;letter-spacing:.4px;opacity:.82;margin-bottom:5px}.phone-bubble.mine .phone-sender{color:#e8f4ff}</style><style id="game-version-style">#game-version{position:fixed;right:max(12px,calc((100vw - 520px)/2 + 12px));bottom:calc(70px + env(safe-area-inset-bottom,0px));z-index:900;color:#aab8c6;background:#101923d9;border:1px solid #425566;border-radius:7px;padding:4px 7px;font:600 11px system-ui,sans-serif;pointer-events:none;letter-spacing:.03em}body.title-screen #game-version{bottom:calc(12px + env(safe-area-inset-bottom,0px))}</style></head><body class="title-screen">
+<div id="game-version" aria-label="Версия игры">v1.20</div>
 <div id="app">
  <div id="scene"><div id="sun"></div><div id="city"></div><div id="road"></div>
   <div id="locationArt"></div><div id="poi"></div>
@@ -205,8 +205,8 @@ const SAFE={l:"📋 По инструкции",h:"деньги целы, но п
 const RISK={l:"⚡ Рискнуть и быстро забрать",h:"60% — всё ок, 40% — удар по безопасности",run:async a=>{if(Math.random()<.6){await collect(a)}else{hurt(35);await sleep(600);await collect(a>>1)}return 1}};
 function dialogueAttribution(t){
  const raw=String(t||'');
- const direct=raw.match(/^\s*(?:📞\s*)?(?:\[)?(Саня|Ден|Лена|Cash-мониторинг|водитель|мониторинг|оператор|охранник|кассир|клиент|инкассатор)\s*[:—-]\s*/i);
- if(direct){const key=direct[1].toLowerCase();const labels={саня:'САНЯ · ВОДИТЕЛЬ',ден:'ДЕН · СОТРУДНИК ЧОП',лена:'ЛЕНА · КАССИР КИЦ',макс:'CASH-МОНИТОРИНГ · МОНИТОРИНГ',водитель:'ВОДИТЕЛЬ',мониторинг:'CASH-МОНИТОРИНГ',оператор:'CASH-МОНИТОРИНГ',охранник:'ОХРАНА',кассир:'КАССИР КИЦ',клиент:'КЛИЕНТ',инкассатор:'ИНКАССАТОР'};return {who:labels[key],text:raw.slice(direct[0].length)}}
+ const direct=raw.match(/^\s*(?:📞\s*)?(?:\[)?(Саня|Ден|Светлана|Cash-мониторинг|водитель|мониторинг|оператор|охранник|кассир|клиент|инкассатор)\s*[:—-]\s*/i);
+ if(direct){const key=direct[1].toLowerCase();const labels={саня:'САНЯ · ВОДИТЕЛЬ',ден:'ДЕН · СОТРУДНИК ЧОП',лена:'СВЕТЛАНА МАРЧЕНКО · КАССИР КИЦ',макс:'CASH-МОНИТОРИНГ · МОНИТОРИНГ',водитель:'ВОДИТЕЛЬ',мониторинг:'CASH-МОНИТОРИНГ',оператор:'CASH-МОНИТОРИНГ',охранник:'ОХРАНА',кассир:'КАССИР КИЦ',клиент:'КЛИЕНТ',инкассатор:'ИНКАССАТОР'};return {who:labels[key],text:raw.slice(direct[0].length)}}
  if(/^\s*📞/.test(raw)&&/[«»]/.test(raw))return {who:'CASH-МОНИТОРИНГ',text:raw};
  if(/^[\s]*[«]/.test(raw))return {who:'РЕПЛИКА',text:raw};
  return {who:'СИТУАЦИЯ',text:raw};
@@ -281,7 +281,13 @@ const PRIV=[
  {l:"🥫 Отвлечь кота кормом",h:"надёжно, +20 минут",run:async a=>{say("🐈 Кот занят едой.");await sleep(900);await collect(a);return 2}},
  {l:"🤲 Аккуратно снять кота",h:"60% ок, 40% царапина",run:async a=>{if(Math.random()<.6){await collect(a)}else{say("🐈 Мяу! Царапина.");hurt(15);await sleep(900);await collect(a>>1)}return 1}}]]];
 const PH={pickup:["Вот пакет, пломба целая.","Держите, запечатано как положено.","Только побыстрее, у меня чайник."],delivery:["Наконец-то привезли!","Ждал вас с утра.","Проверьте паспорт, пожалуйста."]};
-const CASH={n:"Кассир Лена",sk:"#f3d3b5",h:"#7b4b2a",hs:"bun",t:"#2f6fb3",b:"#333"},RAP={n:"Алексей Гуфатов",sk:"#c9926a",h:"#111",hs:"short",t:"#7b1fa2",b:"#222",star:1,beard:1};
+const KIC_STAFF={
+ marchenko:{n:"Светлана Марченко",sk:"#f3d3b5",h:"#7b4b2a",hs:"bun",t:"#2f6fb3",b:"#333"},
+ komarov:{n:"Дмитрий Комаров",sk:"#d8aa89",h:"#332b29",hs:"short",t:"#456b88",b:"#293544",beard:1},
+ lapushkin:{n:"Вячеслав Лапушкин",sk:"#e2b995",h:"#28252a",hs:"short",t:"#527b69",b:"#253c43"}
+};
+function currentCashier(){const day=((META.chapter||1)-1)%5+1;return [KIC_STAFF.marchenko,KIC_STAFF.komarov,KIC_STAFF.lapushkin,KIC_STAFF.marchenko,KIC_STAFF.komarov][day-1]}
+const CASH=KIC_STAFF.marchenko,RAP={n:"Алексей Гуфатов",sk:"#c9926a",h:"#111",hs:"short",t:"#7b1fa2",b:"#222",star:1,beard:1};
 const R=(a,b)=>Math.floor(a+Math.random()*(b-a+1)),NS=12;
 const fmt=m=>String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0");
 let S,W,shown=0,selectedRoute="mixed";
@@ -331,7 +337,7 @@ const RIDE_STOPS=[0,2,5,8];
 const RIDE_TALKS=[
 {lines:[['САНЯ','Cash-мониторинг с утра уже три раза писал. Ты к этому быстро привыкнешь.'],['ДЕН','Сначала маршрут закроем. Потом обсудим.']],choices:['«У него работы много».','«Пусть сначала заявку откроет».','«Пока просто слушаю».'],last:'Ладно. Посмотрим, как день пойдёт.'},
 {lines:[['САНЯ','ПМ сказал, что клиент ждёт. А клиент телефон не берёт.'],['ДЕН','Без ответа мониторинга никуда не разворачиваемся.']],choices:['«Пусть Cash-мониторинг уточняет».','«Подождём официальный ответ».','«Знакомая история».'],last:'Запомним. Вечером ещё всплывёт.'},
-{lines:[['ДЕН','Лена вчера вернула экипажу опись без подписи.'],['САНЯ','Они ещё удивились.']],choices:['«Она права».','«Могла бы помочь разобраться».','«Вечером сами всё проверим».'],last:'Хорошо бы без лишних вопросов в КИЦ.'},
+{lines:[['ДЕН','Светлана вчера вернула экипажу опись без подписи.'],['САНЯ','Они ещё удивились.']],choices:['«Она права».','«Могла бы помочь разобраться».','«Вечером сами всё проверим».'],last:'Хорошо бы без лишних вопросов в КИЦ.'},
 {lines:[['САНЯ','Осталось несколько точек.'],['ДЕН','Не говори, что день спокойный.']],choices:['«Закрываем маршрут».','«Cash-мониторинг ещё позвонит».','Промолчать.'],last:'Ладно, поехали.'}
 ];
 function vnArt(){return `<svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="vsky" x2="0" y2="1"><stop stop-color="#4d7790"/><stop offset="1" stop-color="#d6a080"/></linearGradient></defs><rect width="640" height="400" fill="#162733"/><path d="M48 25H592L615 266H25Z" fill="#263e4e" stroke="#0b1620" stroke-width="15"/><path d="M78 55H562L582 250H58Z" fill="url(#vsky)"/><path d="M60 198 140 165 200 186 290 150 366 191 470 151 580 183V250H60Z" fill="#647987"/><g fill="#3c5263"><path d="M100 185V90h52v95zM170 188V119h62v69zM415 188V110h62v78zM490 188V81h58v107z"/></g><path d="M300 180 256 252H389L345 180Z" fill="#8e8c88"/><path d="M320 185V248" stroke="#eee0c0" stroke-width="5" stroke-dasharray="12 12"/><path d="M0 265Q320 230 640 265V400H0Z" fill="#263845"/><circle cx="175" cy="293" r="76" fill="none" stroke="#0e1923" stroke-width="18"/><path d="M175 293 116 253M175 293 237 251M175 293V360" stroke="#0e1923" stroke-width="12"/><path d="M0 400V285Q30 232 74 244Q118 251 134 400Z" fill="#263b49"/><ellipse cx="69" cy="205" rx="39" ry="48" fill="#c89b7f"/><path d="M30 193Q18 145 69 144Q109 145 107 191L92 173 43 175Z" fill="#252a30"/><path d="M500 400Q518 249 577 246Q635 250 640 400Z" fill="#354c5c"/><ellipse cx="575" cy="209" rx="38" ry="48" fill="#b98b74"/><path d="M537 196Q529 147 575 146Q618 148 613 197L597 175 549 182Z" fill="#252a30"/></svg>`}
@@ -341,11 +347,11 @@ function vnPortrait(who){
  return `<div class="vnportrait ${den?'left':''} ${who==='ТВОЙ ОТВЕТ'?'':'talking'}"><svg viewBox="0 0 230 330" xmlns="http://www.w3.org/2000/svg"><path d="M12 330 Q10 220 77 206L154 206Q220 225 224 330Z" fill="${jacket}" stroke="#16212a" stroke-width="5"/><path d="M88 208L115 254L144 208" fill="#d2d8d6"/><path d="M95 181V224Q115 242 139 222V181" fill="#b9876e"/><ellipse cx="116" cy="118" rx="70" ry="91" fill="#c7987b" stroke="#704c3f" stroke-width="3"/><path d="M46 124Q32 29 108 25Q195 16 187 129L174 93Q141 88 123 62Q101 94 54 91Z" fill="${hair}"/><path d="M71 121h28M133 121h28" stroke="#302a2a" stroke-width="6" stroke-linecap="round"/><path d="M91 156Q115 166 141 155" stroke="#875a4f" stroke-width="3" fill="none"/><rect class="mouth" x="107" y="173" width="18" height="5" rx="3" fill="#6d403b"/><path d="M40 244L79 208L116 266L151 208L190 245" fill="none" stroke="#1e313d" stroke-width="7"/></svg></div>`
 }
 
-const RIDE_DAY_LINES=[["С утра в чате уже спорят, кто заберёт дальний район.", "Пока спорят — мы уже на маршруте."], ["На парковке сегодня опять не хватало места.", "Зато выехали без задержки."], ["Вчерашний экипаж оставил замечание по заявке.", "Пусть мониторинг разбирается, у нас свой маршрут."], ["Слышал, на соседнем участке терминал завис.", "Хорошо, что наш маршрут пока без сюрпризов."], ["У КИЦ сегодня очередь была с самого утра.", "Главное, что ценности выдали по описи."], ["ПМ снова поменял время встречи в последний момент.", "Пусть сначала подтвердит это через мониторинг."], ["В приложении обновили список адресов.", "Я проверил. Наши точки на месте."], ["Сегодня весь город стоит из-за ремонта дороги.", "Тогда не отвлекаемся и следим за окнами."], ["Водитель с третьего экипажа просил передать привет.", "Передавай обратно, если увидишь."], ["На прошлой неделе у нас была похожая заявка.", "Только сегодня действуем по текущим данным."], ["Кассирша сказала, что завтра будет инвентаризация.", "Значит, утром всё перепроверим."], ["Мониторинг прислал уточнение по одной встрече.", "Прочитал. Пока ничего не меняем."], ["На улице резко похолодало.", "Главное, чтобы техника не подвела."], ["В чате обсуждают новую форму отчёта.", "Опять поля добавили?"], ["Саня, ты маршрут уже посмотрел?", "Да. Очерёдность понятна, едем по плану."], ["Сегодня на районе перекрыли один проезд.", "Объедем по карте, главное — не потерять окно."], ["У Дена рация с утра трещит.", "После смены попрошу заменить гарнитуру."], ["Вчерашняя смена закончилась почти впритык.", "Сегодня попробуем без лишних остановок."], ["Кто-то опять забыл расписаться в журнале.", "Проверим перед выездом, потом не вернёшься."], ["У нас сегодня новый клиент на маршруте.", "Тогда документы сверяем особенно внимательно."], ["В КИЦ сказали, что поменяли порядок выдачи.", "Главное, чтобы опись совпадала с загрузкой."], ["Мониторинг просит подтвердить получение сообщения.", "Подтвердил. Не будем держать линию."], ["Соседний экипаж уже вернулся на базу.", "У них район ближе. Нам ещё работать."], ["Сегодня в приложении всё открывается с первого раза.", "Не сглазь, просто работаем."], ["Вчера клиент оставил жалобу на время приезда.", "Сегодня отметки прибытия проверяй сразу."], ["На парковке стоит незнакомая машина.", "Не наше дело. Проверим документы и выезжаем."], ["Смена уже перевалила за середину недели.", "Осталось несколько дней до выходного."], ["Слышал, начальство собирает отчёты по экипажам.", "Тогда пусть отчёты будут без ошибок."], ["Сегодня маршрут проходит через другой район.", "Посмотрим, что там за адреса."], ["Последняя смена недели. Есть планы на вечер?", "Сначала закроем маршрут, потом планы."]];
-function rideTalkForDay(index){const d=((META.chapter||1)-1)%RIDE_DAY_LINES.length;const pair=RIDE_DAY_LINES[d];const extra=RIDE_TALKS[index];return {...extra,lines:[["САНЯ",pair[0]],["ДЕН",pair[1]]],last:index===3?"Ладно, до КИЦ осталось немного.":`Понял. Дальше по маршруту — участок ${index+1}.`}}
+const RIDE_DAY_LINES=[["С утра в чате уже спорят, кто заберёт дальний район.", "Пока спорят — мы уже на маршруте."], ["На парковке сегодня опять не хватало места.", "Зато выехали без задержки."], ["Вчерашний экипаж оставил замечание по заявке.", "Пусть мониторинг разбирается, у нас свой маршрут."], ["Слышал, на соседнем участке терминал завис.", "Хорошо, что наш маршрут пока без сюрпризов."], ["У КИЦ сегодня очередь была с самого утра.", "Главное, что ценности выдали по описи."], ["ПМ снова поменял время встречи в последний момент.", "Пусть сначала подтвердит это через мониторинг."], ["В приложении обновили список адресов.", "Я проверил. Наши точки на месте."], ["Сегодня весь город стоит из-за ремонта дороги.", "Тогда не отвлекаемся и следим за окнами."], ["Водитель с третьего экипажа просил передать привет.", "Передавай обратно, если увидишь."], ["На прошлой неделе у нас была похожая заявка.", "Только сегодня действуем по текущим данным."], ["Светлана Марченко сказала, что завтра будет инвентаризация.", "Значит, утром всё перепроверим."], ["Мониторинг прислал уточнение по одной встрече.", "Прочитал. Пока ничего не меняем."], ["На улице резко похолодало.", "Главное, чтобы техника не подвела."], ["В чате обсуждают новую форму отчёта.", "Опять поля добавили?"], ["Саня, ты маршрут уже посмотрел?", "Да. Очерёдность понятна, едем по плану."], ["Сегодня на районе перекрыли один проезд.", "Объедем по карте, главное — не потерять окно."], ["У Дена рация с утра трещит.", "После смены попрошу заменить гарнитуру."], ["Вчерашняя смена закончилась почти впритык.", "Сегодня попробуем без лишних остановок."], ["Кто-то опять забыл расписаться в журнале.", "Проверим перед выездом, потом не вернёшься."], ["У нас сегодня новый клиент на маршруте.", "Тогда документы сверяем особенно внимательно."], ["В КИЦ сказали, что поменяли порядок выдачи.", "Главное, чтобы опись совпадала с загрузкой."], ["Мониторинг просит подтвердить получение сообщения.", "Подтвердил. Не будем держать линию."], ["Соседний экипаж уже вернулся на базу.", "У них район ближе. Нам ещё работать."], ["Сегодня в приложении всё открывается с первого раза.", "Не сглазь, просто работаем."], ["Вчера клиент оставил жалобу на время приезда.", "Сегодня отметки прибытия проверяй сразу."], ["На парковке стоит незнакомая машина.", "Не наше дело. Проверим документы и выезжаем."], ["Смена уже перевалила за середину недели.", "Осталось несколько дней до выходного."], ["Слышал, начальство собирает отчёты по экипажам.", "Тогда пусть отчёты будут без ошибок."], ["Сегодня маршрут проходит через другой район.", "Посмотрим, что там за адреса."], ["Последняя смена недели. Есть планы на вечер?", "Сначала закроем маршрут, потом планы."]];
+function rideTalkForDay(index){const d=((META.chapter||1)-1)%RIDE_DAY_LINES.length;const pair=RIDE_DAY_LINES[d];const extra=RIDE_TALKS[index];const intro=index===0?[["САНЯ",pair[0]],["ДЕН",pair[1]]]:[];return {...extra,lines:[...intro,...extra.lines]}}
 function vnRide(index){return new Promise(done=>{let step=0;const data=rideTalkForDay(index),el=$('#vn');el.classList.add('open');
 function render(){const choice=step===data.lines.length,ending=step>data.lines.length;const line=ending?['САНЯ',data.last]:choice?['ТВОЙ ОТВЕТ','Что ответишь?']:data.lines[step];
-el.innerHTML=`<div class="vnbox"><div class="vnheader">СМЕНА · В ДОРОГЕ · ${fmt(S.t)}</div><div class="vnart">${vnArt()}${vnPortrait(line[0])}</div><div class="vntext"><div class="vnwho">${({"САНЯ":"САНЯ · ВОДИТЕЛЬ","ДЕН":"ДЕН · СОТРУДНИК ЧОП","ЛЕНА":"ЛЕНА · КАССИР КИЦ","CASH-МОНИТОРИНГ":"CASH-МОНИТОРИНГ","ТВОЙ ОТВЕТ":`${safeName().toUpperCase()} · ИНКАССАТОР`})[line[0]]||line[0]}</div><div class="vnline">${line[1]}</div></div><div class="vnactions">${choice?data.choices.map((t,i)=>`<button data-pick="${i}">${t}</button>`).join(''):`<button id="vnnext">${ending?'Продолжить маршрут →':'Далее →'}</button>`}</div></div>`;
+el.innerHTML=`<div class="vnbox"><div class="vnheader">СМЕНА · В ДОРОГЕ · ${fmt(S.t)}</div><div class="vnart">${vnArt()}${vnPortrait(line[0])}</div><div class="vntext"><div class="vnwho">${({"САНЯ":"САНЯ · ВОДИТЕЛЬ","ДЕН":"ДЕН · СОТРУДНИК ЧОП","ЛЕНА":"СВЕТЛАНА МАРЧЕНКО · КАССИР КИЦ","CASH-МОНИТОРИНГ":"CASH-МОНИТОРИНГ","ТВОЙ ОТВЕТ":`${safeName().toUpperCase()} · ИНКАССАТОР`})[line[0]]||line[0]}</div><div class="vnline">${line[1]}</div></div><div class="vnactions">${choice?data.choices.map((t,i)=>`<button data-pick="${i}">${t}</button>`).join(''):`<button id="vnnext">${ending?'Продолжить маршрут →':'Далее →'}</button>`}</div></div>`;
 if(choice)el.querySelectorAll('[data-pick]').forEach(b=>b.onclick=()=>{const pick=+b.dataset.pick;S.crewTrust=(S.crewTrust||0)+(pick===2?0:1);if(pick===0)META.relations.crew++;if(pick===1)META.relations.monitor--;saveMeta();step++;render()});
 else el.querySelector('#vnnext').onclick=()=>{if(ending){el.classList.remove('open');el.innerHTML='';done()}else{step++;render()}}}
 render()})}
@@ -511,7 +517,7 @@ const PHONE_SEED=[
 const CONTACTS={
 sanya:{name:'Саня · водитель',role:'Водитель · экипаж №4',initials:'С',color:'#4b7892'},
 max:{name:'Cash-мониторинг',role:'Диспетчер маршрута',initials:'C',color:'#655f95'},
-lena:{name:'Лена · кассир КИЦ',role:'Кассир КИЦ',initials:'Л',color:'#a56c77'},
+lena:{name:'Светлана Марченко · кассир КИЦ',role:'Кассир КИЦ',initials:'С',color:'#a56c77'},
 den:{name:'Ден · сотрудник ЧОП',role:'Сотрудник ЧОП · экипаж №4',initials:'Д',color:'#4e847c'},
 group:{name:'Экипаж №4',role:'ЧОП · рабочая группа',initials:'№4',color:'#6e8065'}
 };
@@ -521,7 +527,7 @@ function phoneSenderLabel(sender,mine){
  const who=chatWho(sender);
  if(who==='sanya')return 'САНЯ · ВОДИТЕЛЬ';
  if(who==='max')return 'CASH-МОНИТОРИНГ';
- if(who==='lena')return 'ЛЕНА · КАССИР КИЦ';
+ if(who==='lena')return 'СВЕТЛАНА МАРЧЕНКО · КАССИР КИЦ';
  if(who==='den')return 'ДЕН · СОТРУДНИК ЧОП';
  return 'ЧОП · РАБОЧАЯ ГРУППА';
 }
@@ -563,9 +569,9 @@ const CAMPAIGN_EVENTS={
  ['Передать журнал и попросить проверить историю заявки',{evidence:2,monitor:1,management:1},'Cash-мониторинг прикрепил журнал к разбирательству.'],
  ['Публично обвинить ПМ в рабочем чате',{pm:-2,management:-1,crew:1},'Спор вышел за пределы экипажа.'],
  ['Согласиться с претензией, чтобы быстрее закрыть вопрос',{management:-1,crew:-2},'Претензию закрыли, но Саня недоволен.']]},
-5:{title:'Пятничный разговор',speaker:'Лена',body:'«Кто-то исправил время в заявке после закрытия. Я не говорю, что это умышленно, но выглядит странно».',choices:[
- ['Попросить сохранить историю изменений',{evidence:2,lena:1,integrity:1},'Лена сохранила материалы проверки.'],
- ['Попросить не раздувать конфликт',{lena:-1,management:1},'Лена записала, что ты просил не поднимать вопрос.'],
+5:{title:'Пятничный разговор',speaker:'Светлана Марченко',body:'«Кто-то исправил время в заявке после закрытия. Я не говорю, что это умышленно, но выглядит странно».',choices:[
+ ['Попросить сохранить историю изменений',{evidence:2,lena:1,integrity:1},'Светлана сохранила материалы проверки.'],
+ ['Попросить не раздувать конфликт',{lena:-1,management:1},'Светлана записала, что ты просил не поднимать вопрос.'],
  ['Спросить у Сани, что он об этом думает',{crew:2,evidence:1},'Саня рассказал, что подобное уже бывало.']]},
 8:{title:'Неофициальный разговор',speaker:'Ден',body:'«Второй экипаж тоже получил претензию от того же ПМ. Они уверены, что данные изменили задним числом».',choices:[
  ['Предложить объединить факты и обратиться официально',{evidence:2,crew:1,integrity:1},'Вы собрали независимые записи двух экипажей.'],
@@ -579,7 +585,7 @@ const CAMPAIGN_EVENTS={
  ['Отказаться и сообщить о предложении',{integrity:3,evidence:1,crime:'reported',management:1},'Ты зафиксировал разговор и сообщил о нём.'],
  ['Отказаться, но никому не рассказывать',{integrity:1,crime:'refused'},'Разговор остался между вами.'],
  ['Согласиться участвовать в хищении',{integrity:-5,crime:'involved',risk:3},'Ты перешёл черту. Дальнейшие действия остаются за кадром.']]},
-15:{title:'Внутренняя проверка',speaker:'Лена',body:'«По заявкам и движению ценностей начали проверку. Тебя тоже могут вызвать. Сохрани всё, что у тебя есть».',choices:[
+15:{title:'Внутренняя проверка',speaker:'Светлана Марченко',body:'«По заявкам и движению ценностей начали проверку. Тебя тоже могут вызвать. Сохрани всё, что у тебя есть».',choices:[
  ['Передать подтверждённые материалы проверяющим',{evidence:2,integrity:1,management:1},'Документы приняты.'],
  ['Попросить время и обсудить с экипажем',{crew:1,risk:1},'Проверка продолжилась без твоих объяснений.'],
  ['Скрыть неудобные сведения',{integrity:-2,risk:3},'Неясности в материалах только увеличились.']]},
@@ -595,7 +601,7 @@ const CAMPAIGN_EVENTS={
  ['Согласиться пройти собеседование',{monitor:3,careerMonitor:3},'Тебя включили в список кандидатов.'],
  ['Остаться в экипаже и помочь закончить проверку',{crew:2,career:1},'Cash-мониторинг сказал, что предложение не навсегда закрыто.'],
  ['Сказать, что думаешь об уходе из компании',{freedom:3},'Cash-мониторинг не стал переубеждать.']]},
-26:{title:'Результаты проверки',speaker:'Лена',body:'«Часть расхождений подтвердили. Теперь комиссия смотрит, кто и что знал, какие документы сохранил и что объяснил».',choices:[
+26:{title:'Результаты проверки',speaker:'Светлана Марченко',body:'«Часть расхождений подтвердили. Теперь комиссия смотрит, кто и что знал, какие документы сохранил и что объяснил».',choices:[
  ['Дать полные показания и подтвердить документами',{integrity:2,evidence:2,risk:-2},'Комиссия получила твою версию событий.'],
  ['Признать своё участие, если оно было, и сотрудничать',{confessed:true,integrity:1,risk:-1},'Признание включили в материалы дела.'],
  ['Отказаться отвечать на вопросы комиссии',{risk:2,management:-2},'Комиссия продолжила проверку по имеющимся материалам.']]},
@@ -659,10 +665,10 @@ function openDossier(){const r=META.relations;overlayPage('📂 Личное д�
 function openChronicle(){overlayPage('📖 Хроника экипажа',`<p class="sub">Здесь остаются важные события твоей истории.</p>${META.chronicle.length?META.chronicle.slice(-35).reverse().map(x=>`<div class="msg"><small>${esc(x.day)}</small>${esc(x.text)}</div>`).join(''):'<p>История начнётся после первой смены.</p>'}`)}
 function addChronicle(text){META.chronicle.push({day:`Неделя ${META.week||1}, день ${W.day}`,text});if(META.chronicle.length>100)META.chronicle.shift();saveMeta()}
 function prologueStart(){
- panel(`<div class="hero"><small>ПРОЛОГ · 07:42</small><h1>НОВЫЙ ЭКИПАЖ</h1><p>Ты перешёл в четвёртый экипаж. Машина стоит у КИЦ. В телефоне уже спорят о сегодняшнем маршруте.</p></div><div class="prologue-chat"><div class="chat-line">${chatAvatar('sanya',true)}<div class="msg"><small>Саня · 07:38</small>Ты новенький в четвёртом? Мы у служебного входа.</div></div><div class="chat-line">${chatAvatar('max',true)}<div class="msg"><small>Cash-мониторинг · мониторинг</small>Маршрут согласован. Только без самодеятельности.</div></div><div class="chat-line">${chatAvatar('sanya',true)}<div class="msg"><small>Саня</small>Cash-мониторинг, он ещё даже в КИЦ не зашёл.</div></div></div><button class="card btn" onclick="prologueChoice(0)">«Я у КИЦ. Сейчас подойду»</button><button class="card" onclick="prologueChoice(1)">«Cash-мониторинг, маршрут посмотрю перед выездом»</button>`)
+ panel(`<div class="hero"><small>ПРОЛОГ · 07:42</small><h1>НОВЫЙ ЭКИПАЖ</h1><p>Ты перешёл в четвёртый экипаж. Машина стоит у КИЦ. В телефоне уже спорят о сегодняшнем маршруте.</p></div><div class="prologue-chat"><div class="chat-line">${chatAvatar('sanya',true)}<div class="msg"><small>Саня · 07:38</small>Ты новенький в четвёртом? Мы у служебного входа.</div></div><div class="chat-line">${chatAvatar('max',true)}<div class="msg"><small>Cash-мониторинг · мониторинг</small>Маршрут согласован. Только без самодеятельности.</div></div><div class="chat-line">${chatAvatar('sanya',true)}<div class="msg"><small>Саня</small>Cash-мониторинг, он ещё даже в КИЦ не зашёл.</div></div></div><button class="card" onclick="prologueChoice(0)">«Я у КИЦ. Сейчас подойду»</button><button class="card" onclick="prologueChoice(1)">«Сначала познакомлюсь с экипажем, потом посмотрю маршрут»</button>`)
 }
-function prologueChoice(i){META.introSeen=true;META.relations[i?'monitor':'crew']++;addChronicle(i?'С первого дня решил уточнить маршрут у мониторинга.':'Познакомился с экипажем №4 у КИЦ.');META.messages.push(['Ты · 07:43',i?'Маршрут изучу перед выездом.':'Я у КИЦ, сейчас подойду.']);saveMeta();panel(`<h2>🏢 КИЦ · знакомство</h2><p class="sub">Лена выдаёт документы. Саня ждёт у выхода. Ден молча проверяет список заявок.</p><div class="msg"><small>Лена</small>«Тебя к четвёртому перевели? Сначала проверь документы, потом подписывай».</div><button class="card btn" onclick="prologueFinish(0)">Проверить документы перед подписью</button><button class="card" onclick="prologueFinish(1)">Попросить Лену показать порядок</button><button class="card" onclick="prologueFinish(2)">Подписать не глядя</button>`)}
-function prologueFinish(i){if(i===0)META.relations.management++;if(i===1)META.relations.crew++;if(i===2)META.relations.management--;addChronicle(i===2?'Лена остановила тебя: документы нужно проверить перед подписью.':i===1?'Попросил Лену объяснить оформление перед первой сменой.':'Проверил документы в КИЦ перед подписью.');saveMeta();newWeek()}
+function prologueChoice(i){META.introSeen=true;META.relations[i?'monitor':'crew']++;addChronicle(i?'Перед выездом решил познакомиться с экипажем и изучить маршрут.':'Познакомился с экипажем №4 у КИЦ.');META.messages.push(['Ты · 07:43',i?'Сначала познакомлюсь с экипажем, потом изучу маршрут.':'Я у КИЦ, сейчас подойду.']);saveMeta();panel(`<h2>🏢 КИЦ · знакомство</h2><p class="sub">Светлана выдаёт документы. Саня ждёт у выхода. Ден молча проверяет список заявок.</p><div class="msg"><small>Светлана Марченко</small>«Тебя к четвёртому перевели? Сначала проверь документы, потом подписывай».</div><button class="card" onclick="prologueFinish(0)">Проверить документы перед подписью</button><button class="card" onclick="prologueFinish(1)">Попросить Светлану показать порядок</button><button class="card" onclick="prologueFinish(2)">Подписать не глядя</button>`)}
+function prologueFinish(i){if(i===0)META.relations.management++;if(i===1)META.relations.crew++;if(i===2)META.relations.management--;addChronicle(i===2?'Светлана остановила тебя: документы нужно проверить перед подписью.':i===1?'Попросил Светлану объяснить оформление перед первой сменой.':'Проверил документы в КИЦ перед подписью.');saveMeta();newWeek()}
 function afterShift(){
  const eventDay=campaignEventForDay();if(eventDay)return campaignShow(eventDay);
  if(S.afterShiftPaid)return afterShiftAlready();S.afterShiftPaid=true;
@@ -785,7 +791,7 @@ function hurt(n){S.hp-=n;const sc=$('#scene');sc.classList.add('shake','hit');se
 async function load(){hideRoom();await sleep(500);const sc=$('#scene').getBoundingClientRect(),v=$('#van').getBoundingClientRect();for(let i=0;i<8;i++){const c=document.createElement('span');c.className='coin';c.textContent='📦';c.style.left=(sc.width*.8)+'px';c.style.top='60px';$('#scene').appendChild(c);c.animate([{transform:'translate(0,0)',opacity:1},{transform:`translate(${v.left-sc.left+80-sc.width*.8}px,${v.top-sc.top-40}px) scale(.6)`,opacity:0}],{duration:800,delay:i*120,easing:'ease-in'}).onfinish=()=>c.remove()}await sleep(1500)}
 // Постоянные персонажи: реплики зависят от смены, маршрута и репутации.
 const CREW={
- lena:{name:'Лена · касса',style:'сухая и собранная'},
+ lena:{name:'Светлана Марченко · касса',style:'сухая и собранная'},
  driver:{name:'Саня · водитель',style:'сарказм вместо навигатора'},
  guard:{name:'Ден · ЧОП',style:'молчаливый, пока не припекло'},
  monitor:{name:'Cash-мониторинг',style:'вечно пытается впихнуть невпихуемое'}
@@ -810,7 +816,7 @@ const BANTER={
 function crewLine(kind){const lines=BANTER[kind]||[];if(!lines.length)return '';const [who,line]=lines[R(0,lines.length-1)];return `<div class="crewline"><b>${CREW[who].name}</b><span>${esc(line)}</span></div>`}
 function crewScene(kind,headline,body,actions){panel(`<h2>${headline}</h2><p class="sub">${body}</p>${crewLine(kind)}${actions||''}`)}
 const KIC=[
-["Доброе утро. На сегодня у вашего экипажа двенадцать точек. Маршрут уже согласован с мониторингом.",[["🙂 Вежливо поздороваться","+1 к репутации",1,0],["😒 «Лен, давай быстрее, мы уже задерживаемся»","−1 к репутации",-1,0]]],
+["Доброе утро. На сегодня у вашего экипажа двенадцать точек. Маршрут уже согласован с мониторингом.",[["🙂 Вежливо поздороваться","+1 к репутации",1,0],["😒 «Давайте быстрее, мы уже задерживаемся»","−1 к репутации",-1,0]]],
 ["Вот ценности по вашему маршруту: кассеты для банкоматов и сейф-пакеты для физических лиц. Сверь номера и пломбы с описью.",[["🔍 Проверить пломбы по описи","+10 минут, +2 к репутации",2,10],["✍️ Подписать без проверки","быстрее, но −2 к репутации",-2,0]]],
 ["По документам всё. После загрузки получите маршрутную карту. Если будут изменения — уточняйте через мониторинг.",[["📦 Завершить оформление и загрузку","поехали",0,0]]]];
 const KIC_OPENINGS=[
@@ -821,7 +827,7 @@ const KIC_OPENINGS=[
  'Сегодня другой район и новый маршрут. Проверьте пломбы — и можете выезжать.',
  'Смена обещает быть длинной. Двенадцать точек, последняя заявка может сдвинуться по согласованию.'
 ];
-function kic(st){workSound('kic');hud();clearLocation();const[t0,o]=KIC[st],t=st===0?KIC_OPENINGS[((META.chapter||1)-1)%KIC_OPENINGS.length]:t0;showRoom({p:CASH,room:5},t);panel(`<h2>🏢 КИЦ · ${fmt(S.t)}</h2><p class="sub">Условия дня: ${DAY_THEMES[(W.day-1)%5].name}. ${DAY_THEMES[(W.day-1)%5].desc} Оформи получение ценностей у сотрудницы КИЦ.</p>${st===0?crewLine("start"):""}`+o.map((x,k)=>`<button class="card" onclick="kicPick(${st},${k})"><span class="nm">${x[0]}<small>${x[1]}</small></span></button>`).join(''))}
+function kic(st){workSound('kic');hud();clearLocation();const[t0,o]=KIC[st],t=st===0?KIC_OPENINGS[((META.chapter||1)-1)%KIC_OPENINGS.length]:t0;showRoom({p:currentCashier(),room:5},t);panel(`<h2>🏢 КИЦ · ${fmt(S.t)}</h2><p class="sub">Условия дня: ${DAY_THEMES[(W.day-1)%5].name}. ${DAY_THEMES[(W.day-1)%5].desc} Оформи получение ценностей у сотрудника КИЦ: ${currentCashier().n}.</p>${st===0?crewLine("start"):""}`+o.map((x,k)=>`<button class="card" onclick="kicPick(${st},${k})"><span class="nm">${x[0]}<small>${x[1]}</small></span></button>`).join(''))}
 async function kicPick(st,k){if(S.busy)return;S.busy=1;const x=KIC[st][1][k];rep(x[2]);S.t+=x[3];if(st<2){S.busy=0;kic(st+1)}else{await load();S.t+=20;S.busy=0;issueRouteMap()}}
 const DAY_THEMES=[
  {name:'Обычный понедельник',desc:'Всё по расписанию. Пока что.',delay:0},
@@ -891,12 +897,12 @@ const CALLS=[
 function call(){S.called=1;hud();panel(`<div class="ev">📞</div><h2>Звонит Cash-мониторинг</h2><p class="sub">«Есть уточнение по текущему маршруту. Сначала подтвердите статус заявки, затем продолжайте по графику.»</p>`+CALLS.map((o,k)=>`<button class="card" onclick="callOpt(${k})"><span class="nm">${o.l}<small>${o.h}</small></span></button>`).join(''))}
 async function callOpt(k){if(S.busy)return;S.busy=1;await CALLS[k].run();proceed()}
 async function rapper(sh){say("🔙 Разворачиваемся в КИЦ…");await drive("🏢");S.t+=20;
- showRoom({p:CASH,room:5},"Сдавай кассеты с банкоматов, оформим по номерам и пломбам.");await sleep(2200);S.t+=15;S.bags+=R(2,3);hideRoom();
+ showRoom({p:currentCashier(),room:5},"Сдавай кассеты с банкоматов, оформим по номерам и пломбам.");await sleep(2200);S.t+=15;S.bags+=R(2,3);hideRoom();
  say("🚐 Едем к рэперу…");await drive("🎤");S.t+=25;
  showRoom({p:RAP,room:R(0,4)},"Спасибо, что приехали. Вот пакет, пломба целая.");await sleep(1800);
  await collect(R(500,900));S.t+=10;S.bags++;rep(5);hideRoom();hud()}
 async function endDay(fail){S.busy=1;
- if(!fail&&!S.returnedKic){await drive("🏢");S.t+=20;S.returnedKic=true;showRoom({p:CASH,room:5},"По описи сдаём кассеты и пакеты отдельно. Планшет тоже не забудь.");await sleep(2000);if(S.shiftLog.length&&!S.auditFinished)return kicAuditStart()}
+ if(!fail&&!S.returnedKic){await drive("🏢");S.t+=20;S.returnedKic=true;showRoom({p:currentCashier(),room:5},"По описи сдаём кассеты и пакеты отдельно. Планшет тоже не забудь.");await sleep(2000);if(S.shiftLog.length&&!S.auditFinished)return kicAuditStart()}
  hideRoom();if(fail){if(S.robberyResult){rep(-2)}else{S.mistakes++;rep(-25);}}else if(!S.late && S.t<=1200)rep(5);if(S.t>1200){rep(-Math.min(15,Math.ceil((S.t-1200)/10)));}const cash=fail?0:S.cash;W.total+=cash;
  const last=W.day>=5;
  const dailyStats=`<div class="daystats"><div><b>🏧 ${S.atmDone}</b><small>банкоматов</small></div><div><b>🪪 ${S.flDone}</b><small>встреч ФЛ</small></div><div><b>⚠️ ${S.mistakes}</b><small>ошибок</small></div><div><b>${S.skipped}</b><small>не выполнено</small></div><div><b>${S.monitorCalls}</b><small>звонков в мониторинг</small></div><div><b>${S.atmChecks}</b><small>сверок кассет</small></div><div><b>📋 ${S.paperMeetings}</b><small>встреч по описи</small></div><div><b>${S.paperDisputes}</b><small>расхождений</small></div><div><b>${S.kicFindings}</b><small>замечаний КИЦ</small></div><div><b>${S.gearIssues}</b><small>сбоев оборудования</small></div><div><b style="color:var(--g)">+${S.repGain}</b><small>репутации</small></div><div><b style="color:var(--red)">−${S.repLoss}</b><small>репутации</small></div><div><b>${S.repGain-S.repLoss>=0?'+':''}${S.repGain-S.repLoss}</b><small>итог за день</small></div></div>`;
@@ -908,7 +914,21 @@ mainMenu();
 const FIRST=["Александр","Мария","Илья","Ольга","Дмитрий","Анна","Сергей","Виктория"];
 const LAST=["Петров","Смирнов","Кузнецов","Орлов","Морозов","Соколов","Волков","Белов"];
 const FEMALE_FIRST=new Set(["Мария","Ольга","Анна","Виктория"]);
-function customerFullName(){const first=FIRST[R(0,FIRST.length-1)],last=LAST[R(0,LAST.length-1)];return first+" "+(FEMALE_FIRST.has(first)?last+"а":last)}
+function customerFullName(c){
+ // ФИО в заявке должно принадлежать тому же человеку, которого игрок видит на сцене.
+ // Генерируем фамилию один раз на заявку, чтобы повторное открытие паспорта не меняло данные.
+ if(c && c.p && c.p.n){
+   if(!c.docIdentity){
+     const first=c.p.n;
+     const last=LAST[R(0,LAST.length-1)];
+     const female=!!c.p.d || FEMALE_FIRST.has(first);
+     c.docIdentity=first+" "+(female?last+"а":last);
+   }
+   return c.docIdentity;
+ }
+ const first=FIRST[R(0,FIRST.length-1)],last=LAST[R(0,LAST.length-1)];
+ return first+" "+(FEMALE_FIRST.has(first)?last+"а":last);
+}
 const SPECIAL_CLIENT_NAMES={
  "егор крид":"Егор Кридов",
  "егор кридов":"Егор Кридов",
@@ -920,7 +940,7 @@ function specialClientFullName(c){
  for(const [key,value] of Object.entries(SPECIAL_CLIENT_NAMES))if(raw.includes(key))return value;
  return c?.specialFullName||c?.p?.fullName||null;
 }
-function docsStart(){const c=S.rt[S.i];const full=specialClientFullName(c)||customerFullName();const series=String(R(1000,9999)),number=String(R(100000,999999));
+function docsStart(){const c=S.rt[S.i];const full=specialClientFullName(c)||customerFullName(c);const series=String(R(1000,9999)),number=String(R(100000,999999));
  const mismatch=!!c.docMismatch;const type=mismatch?R(1,3):((c.storyFirst||c.storyVIP)?0:(Math.random()<.09?R(4,7):0));
  const shownName=type===1?(full.endsWith('а')?full.slice(0,-1):full+'а'):full;
  const shownNumber=type===2?String((Number(number)+1)%1000000).padStart(6,'0'):number;
@@ -1012,7 +1032,7 @@ function kicAuditStart(){
  S.busy=0;S.auditFinished=true;
  const bad=S.shiftLog.filter(x=>!x.resolved);
  S.kicFindings+=bad.length;
- panel(`<div class="ev">🏢</div><h2>КИЦ · вечерняя проверка</h2><p class="sub">Лена сверяет документы и журнал происшествий. Записей за смену: ${S.shiftLog.length}. Замечаний: ${bad.length}.</p><div class="doc">${S.shiftLog.map(x=>`<div>${x.resolved?'✅':'⚠️'} ${esc(x.text)}</div>`).join('')}</div>${bad.length?`<p class="sub">По незакрытым замечаниям потребуется объяснение. Ошибки повлияют на оценку смены.</p><button class="card" onclick="kicAuditResolve(0)"><span class="nm">📝 Оформить объяснение и закрыть проверку</span></button><button class="card" onclick="kicAuditResolve(1)"><span class="nm">😒 Спорить с замечаниями без документов</span></button>`:`<button class="card btn" onclick="kicAuditResolve(0)"><span class="nm">✅ Подтвердить приём документов</span></button>`}`)
+ panel(`<div class="ev">🏢</div><h2>КИЦ · вечерняя проверка</h2><p class="sub">${currentCashier().n} сверяет документы и журнал происшествий. Записей за смену: ${S.shiftLog.length}. Замечаний: ${bad.length}.</p><div class="doc">${S.shiftLog.map(x=>`<div>${x.resolved?'✅':'⚠️'} ${esc(x.text)}</div>`).join('')}</div>${bad.length?`<p class="sub">По незакрытым замечаниям потребуется объяснение. Ошибки повлияют на оценку смены.</p><button class="card" onclick="kicAuditResolve(0)"><span class="nm">📝 Оформить объяснение и закрыть проверку</span></button><button class="card" onclick="kicAuditResolve(1)"><span class="nm">😒 Спорить с замечаниями без документов</span></button>`:`<button class="card btn" onclick="kicAuditResolve(0)"><span class="nm">✅ Подтвердить приём документов</span></button>`}`)
 }
 function kicAuditResolve(i){
  const bad=S.shiftLog.filter(x=>!x.resolved).length;
